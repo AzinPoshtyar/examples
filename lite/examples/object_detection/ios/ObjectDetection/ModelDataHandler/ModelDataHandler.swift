@@ -36,7 +36,7 @@ typealias FileInfo = (name: String, extension: String)
 
 /// Information about the MobileNet SSD model.
 enum MobileNetSSD {
-  static let modelInfo: FileInfo = (name: "detect", extension: "tflite")
+  static let modelInfo: FileInfo = (name: "SSDmodel", extension: "tflite")
   static let labelsInfo: FileInfo = (name: "labelmap", extension: "txt")
 }
 
@@ -55,8 +55,8 @@ class ModelDataHandler: NSObject {
   // MARK: Model parameters
   let batchSize = 1
   let inputChannels = 3
-  let inputWidth = 300
-  let inputHeight = 300
+  let inputWidth = 320
+  let inputHeight = 320
 
   // image mean and std for floating model, should be consistent with parameters used in model training
   let imageMean: Float = 127.5
